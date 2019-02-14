@@ -1,0 +1,21 @@
+{
+  "welcomeFile": "/TunaApp/index.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": [
+    {
+      "source": "^/TunaApp/(.*)$",
+      "target": "$1",
+      "localDir": "webapp"
+    },
+    {
+			"source": "^/multichainDestination/(.*)$",
+			"target": "$1",
+			"destination": "multichainDestination",
+			"csrfProtection": false,
+			"authenticationType": "none"
+	}
+  ]
+}
