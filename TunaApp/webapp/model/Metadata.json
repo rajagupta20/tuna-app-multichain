@@ -1,0 +1,55 @@
+{
+	"Owner": [
+		{
+			"Name": "--Select Owner--",
+			"Key": "--Select Owner--"
+		},
+		{
+			"Name": "Alex",
+			"Key": "Alex"
+		},
+		{
+			"Name": "Stefan",
+			"Key": "Stefan"
+		}, 
+		{
+			"Name": "Thomas",
+			"Key": "Thomas"
+		},
+		{
+			"Name": "Megan",
+			"Key": "Megan"
+		}, 
+		{
+			"Name": "Peter",
+			"Key": "Peter"
+		}
+	],
+	"VehicleTypes": [
+		{
+			"Name": "--Select Vehicle--",
+			"Key": "--Select Vehicle--"
+		},
+		{
+			"Name": "Maruti Suzuki Swift",
+			"Key": "Maruti Suzuki Swift"
+		},
+		{
+			"Name": "Stefan",
+			"Key": "Stefan"
+		}, 
+		{
+			"Name": "Thomas",
+			"Key": "Thomas"
+		},
+		{
+			"Name": "Megan",
+			"Key": "Megan"
+		}, 
+		{
+			"Name": "Peter",
+			"Key": "Peter"
+		}
+	]
+	
+}

@@ -1,0 +1,75 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form">
+	
+	<Dialog
+	title = "Create Tuna Record"
+	id="CreateVehicleEntry"
+		>
+		<content>
+			<f:Form 
+				editable="true">
+				<f:layout>
+					<f:ResponsiveGridLayout
+						labelSpanXL="3"
+						labelSpanL="3"
+						labelSpanM="3"
+						labelSpanS="12"
+						adjustLabelSpan="false"
+						emptySpanXL="4"
+						emptySpanL="4"
+						emptySpanM="4"
+						emptySpanS="0"
+						columnsXL="1"
+						columnsL="1"
+						columnsM="1"
+						singleContainerFullSize="false" />
+				</f:layout>
+				<f:formContainers>
+					<f:FormContainer title="">
+					<f:formElements>
+						
+						<f:FormElement label="Catch ID">
+							<f:fields>
+								<Input id="inputCatchId" />
+							</f:fields>
+						</f:FormElement>
+							<f:FormElement label="Longitude">
+							<f:fields>
+								<Input id="inputLongitude" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Latitude">
+							<f:fields>
+								<Input id="inputLatitude"  />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="DateOfCatching">
+							<f:fields>
+								<DatePicker  id="inputDateOfCatching"  displayFormat="long"/>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Holder">
+							<f:fields>
+								<ActionSelect id="inputHolder"  class="sapUiSmallMarginBottom" items="{ path: 'metadataModel>/Owner'  }" >
+									<items>
+										<core:Item key="{metadataModel>Key}" text="{metadataModel>Name}"/>
+									</items>
+								</ActionSelect>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+					</f:FormContainer>
+				</f:formContainers>
+			</f:Form>	
+		</content>
+		<beginButton>
+			<Button text="Save" press="onClickSave"/>
+		</beginButton>
+		
+		<endButton>
+			<Button text="Cancel" press="onClickCancel"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

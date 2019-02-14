@@ -1,0 +1,64 @@
+<mvc:View controllerName="tuna.TunaApp.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+		<Page title="Tuna Application - Built on SAP MultiChain Service">
+			<subHeader>
+			      <Toolbar>
+					  <Title level="H1" text="Tuna Records" />
+					              <ToolbarSpacer />
+
+			        <SearchField
+			          search="onSearch"
+			          placeholder="Search with Catch ID"
+			          width="75%" />
+			      </Toolbar>
+			    </subHeader>
+				<content>
+					<List width="100%" headerText="" id="vehicleList"
+					    items="{/cars}" mode="SingleSelectMaster"
+					    >
+					    <items>
+					      <ObjectListItem
+					        title="{ parts: [
+													{path: 'id'}
+												],
+												formatter: '.formatter.formatCatchId'
+											}"
+					        type="Active"
+					        press="onListItemPress"
+					        number="Catch Location"
+					        numberUnit="{ parts: [
+												{path: 'longitude'},
+												{path: 'latitude'}
+											],
+											formatter: '.formatter.formatLocation'
+									}"
+					        >
+					        <attributes>
+					          <ObjectAttribute text="{ parts: [
+															{path: 'date'}
+														],
+														formatter: '.formatter.formatPurchaseDate'
+													}" />
+					          <ObjectAttribute text="{ parts: [
+															{path: 'holder'}
+														],
+														formatter: '.formatter.formatOwner'
+													}" />
+					        </attributes>
+					      </ObjectListItem>
+					    </items>
+					  </List>
+				</content>
+				<footer>
+					 <Toolbar>
+				    	<ToolbarSpacer/>
+				        <Button id= "createVehicleEntryButton" text="Create Record" press="onPressCreateVehicle"  type="Accept"/>
+				        <Button id= "transferVehicleButton"  enabled="true" text="Change Tuna Holder" press="onPressTransferVehicle" type="Accept"/>
+				      </Toolbar>
+			    </footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
